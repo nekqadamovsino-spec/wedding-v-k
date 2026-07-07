@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>V & K — 26.09.2026</title>
+  <meta name="description" content="Свадебное приглашение V и K — 26.09.2026" />
+  <meta property="og:title" content="V & K" />
+  <meta property="og:description" content="Приглашение на свадьбу • 26.09.2026" />
+  <meta property="og:image" content="images/og.jpg">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&family=Marck+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="grain"></div>
+
+  <header class="nav">
+    <div class="logo">V <span>|</span> K</div>
+    <nav>
+      <a href="#home">Дата</a>
+      <a href="#welcome">Приветствие</a>
+      <a href="#location">Локация</a>
+      <a href="#program">Программа</a>
+      <a href="#rsvp">Анкета</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero page-section">
+      <div class="hero-photo">
+        <img src="images/hero.jpg" alt="V и K" />
+      </div>
+      <div class="hero-card">
+        <p class="overline">Приглашение на свадьбу</p>
+        <h1>V <span>и</span> K</h1>
+        <div class="divider"><i></i><b>♡</b><i></i></div>
+        <p class="date">26.09.2026</p>
+        <p class="script">Мы будем счастливы разделить этот день с вами</p>
+      </div>
+    </section>
+
+    <section id="welcome" class="intro page-section">
+      <p class="overline">Приветствие</p>
+      <p class="script big">Дорогие гости!</p>
+      <p>Мы счастливы пригласить вас разделить с нами один из самых важных дней нашей жизни.</p>
+      <p>Для нас большая честь провести этот день в кругу самых родных и близких людей.</p>
+      <p>Будем искренне рады видеть вас на нашем празднике!</p>
+    </section>
+
+    <section id="location" class="details page-section">
+      <div class="section-title">
+        <span></span><h2>Локация</h2><span></span>
+      </div>
+      <div class="location-card">
+        <div class="location-text">
+          <p class="script big">Зал «Шарль Азнавур»</p>
+          <p class="address">Московская область, г. Химки,<br>ул. Заводская, 2, стр. 1</p>
+          <a class="btn" href="https://yandex.ru/maps/?text=Московская%20область%2C%20Химки%2C%20Заводская%20улица%2C%202%2C%20стр.%201" target="_blank">Открыть карту</a>
+        </div>
+        <div class="location-photo">
+          <p>Фото зала можно добавить сюда,<br>когда будет точное фото площадки.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="program" class="program page-section">
+      <div class="section-title"><span></span><h2>Программа дня</h2><span></span></div>
+      <div class="timeline">
+        <div>
+          <time>10:00</time>
+          <p><strong>Утро невесты</strong><br>Здесь будет царить лёгкое волнение, аромат цветов и звон бокалов.</p>
+        </div>
+        <div>
+          <time>12:00</time>
+          <p><strong>Венчание</strong><br>Особое таинство, где царит тишина и свет.</p>
+        </div>
+        <div>
+          <time>16:00</time>
+          <p><strong>Сбор гостей</strong><br>Просим взять с собой хорошее настроение.</p>
+        </div>
+        <div>
+          <time>17:00</time>
+          <p><strong>Начало торжества</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="rsvp" class="rsvp page-section">
+      <div class="rsvp-grid">
+        <div class="dress-card">
+          <p class="overline">Dress Code</p>
+          <h2>Дресс-код</h2>
+          <p>Никаких строгих правил — только комфорт и хорошее настроение!</p>
+          <p>Просим девушек воздержаться от белых цветов в одежде.</p>
+          <p>Благодарим за понимание!</p>
+        </div>
+
+        <form class="form-card" id="rsvpForm">
+          <p class="overline">Анкета</p>
+          <h2>Подтвердите присутствие</h2>
+          <input name="name" type="text" placeholder="ФИО" required>
+          <input name="guests" type="number" min="1" placeholder="Количество человек" required>
+          <div class="radio-title">Вы придёте?</div>
+          <label><input type="radio" name="presence" value="Да, будем" required> Да, будем</label>
+          <label><input type="radio" name="presence" value="К сожалению, не сможем"> К сожалению, не сможем</label>
+          <button class="btn primary" type="submit">Подтвердить</button>
+          <p class="form-note">После нажатия ответ подготовится для отправки сообщением.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p class="script">С любовью, V и K ♡</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
