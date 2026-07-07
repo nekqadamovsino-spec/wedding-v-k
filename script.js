@@ -1,4 +1,4 @@
-const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzEGiULQq_54MxqhsM8TWBouGRtcQQ75yAQf7Qg827mPYAPVKU2nLpEHIN81IYkei4cuw/exec";
+const WEB_APP_URL = "https://script.google.com/macros/s/AKfycby76RvD5_bBrh-sse3DruKMMle5Nt4sPr5psJBt6MoCcDNck6c3MOaKKGJCIworT4Xvug/exec";
 
 const form = document.getElementById("rsvpForm");
 
