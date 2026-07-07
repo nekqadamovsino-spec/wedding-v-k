@@ -1,17 +1,37 @@
-const weddingDate = new Date('2026-09-26T10:00:00+03:00');
+const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzEGiULQq_54MxqhsM8TWBouGRtcQQ75yAQf7Qg827mPYAPVKU2nLpEHIN81IYkei4cuw/exec";
 
-const form = document.getElementById('rsvpForm');
+const form = document.getElementById("rsvpForm");
+
 if (form) {
-  form.addEventListener('submit', function (e) {
+  form.addEventListener("submit", async function (e) {
     e.preventDefault();
 
-    const data = new FormData(form);
-    const name = data.get('name') || '';
-    const guests = data.get('guests') || '';
-    const presence = data.get('presence') || '';
+    const data = {
+      name: form.name.value,
+      guests: form.guests.value,
+      presence: form.presence.value
+    };
 
-    const text = `Здравствуйте! Ответ на приглашение V и K:%0A%0AФИО: ${encodeURIComponent(name)}%0AКоличество человек: ${encodeURIComponent(guests)}%0AПрисутствие: ${encodeURIComponent(presence)}`;
+    try {
+      const response = await fetch(WEB_APP_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      });
 
-    window.open(`https://t.me/share/url?url=&text=${text}`, '_blank');
+      const result = await response.json();
+
+      if (result.result === "success") {
+        alert("Спасибо! Ваш ответ отправлен.");
+        form.reset();
+      } else {
+        alert("Ошибка отправки.");
+      }
+    } catch (err) {
+      alert("Ошибка соединения.");
+      console.error(err);
+    }
   });
 }
